@@ -109,3 +109,19 @@ function serveAge(age){
 serveAge(18);
 serveAge(12);
 console.log('*******************************************************');
+console.log('now add a country conditional')
+function serveAge(age, country){
+    if(age>=18 && country==='UK'){
+     console.log('Enjoy ur wine');
+     }
+     if(age>=21 && country==='USA'){
+        console.log('Enjoy ur wine');
+        }
+     else{
+     console.log('OI GET OUT OF MY BAR');
+     }
+ }
+ serveAge(18,'UK');
+serveAge(21,'USA');
+serveAge(17,'UK');
+serveAge(20,'USA');
