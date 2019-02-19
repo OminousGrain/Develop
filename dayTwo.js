@@ -309,14 +309,15 @@ function findLastVowel(str){
 
     matcherVowel('1e34e');
    
-    //Find the sum of the digits in the number 100!
+  console.log('******************')
 
-    factorial=(num)=>{
-        let nums = []
-        for(let i=num;i<0;i--){
-            nums.push(i);
-        }
-        console.log(nums)
-    }
+  nameAger=(name,age)=>{
+      console.log(`my name is ${name} and my age is ${age}`)
+  }
+  nameAger('Ben',23);
 
-    factorial(10)
+  multiplier=(a,b)=>{
+      console.log(a*b)
+  }
+  multiplier(1,3)
+  multiplier(2,3)
