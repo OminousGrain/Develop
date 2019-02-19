@@ -125,3 +125,5 @@ function serveAge(age, country){
 serveAge(21,'USA');
 serveAge(17,'UK');
 serveAge(20,'USA');
+console.log('*******************************************************');
+
