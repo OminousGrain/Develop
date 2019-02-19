@@ -1,3 +1,4 @@
+
 //display the 9th characxter in uppercase on the console
 let test1='All Around the World';
 
@@ -118,7 +119,7 @@ function serveAge(age, country){
         console.log('Enjoy ur wine');
         }
      else{
-     console.log('OI GET OUT OF MY BAR');
+     console.log(`get out you dumb ${country}-person`);
      }
  }
  serveAge(18,'UK');
@@ -126,4 +127,3 @@ serveAge(21,'USA');
 serveAge(17,'UK');
 serveAge(20,'USA');
 console.log('*******************************************************');
-
