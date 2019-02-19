@@ -67,17 +67,12 @@ console.log(myFavDrink)
 console.log(`my favorite drink is ${myFavDrink.toUpperCase()}`)
 console.log('*******************************************************');
 console.log('store someones name age and favorite color and logs it in complete sentence')
-
 const myName1 = 'Ben'
 const myColor1='red'
 let myAge1=23
 console.log(`my name is ${myName1} my age is ${myAge1} and my fav color is ${myColor1}`)
 console.log('*******************************************************');
-
 console.log('lets make an object class constructor then use it to produce a person and then use a contained function ')
-
-
-
 class Person {
 
     constructor(name, color, age) {
@@ -90,13 +85,9 @@ class Person {
       console.log(`my name is ${myName1} my age is ${myAge1} and my fav color is ${myColor1}`);
     }
 }
-
-
-
 const ben = new Person('ben','age','red');
 ben.speak();
 console.log('*******************************************************');
-
 
 console.log('Make two variables, one called lowerBound and one called upperBound.');
 
@@ -106,24 +97,15 @@ function randomNum(lowerBound, upperBound){
 }
 randomNum(10,19);
 console.log('*******************************************************');
-
-
 console.log('else if using minimum age task')
-
-
 function serveAge(age){
-
    if(age>=18){
-    console.log('Enjoy ur wine')
+    console.log('Enjoy ur wine');
     }
     else{
-    console.log('OI GET OUT OF MY BAR')
+    console.log('OI GET OUT OF MY BAR');
     }
-
 }
-
-serveAge(18)
-serveAge(12)
-
-
+serveAge(18);
+serveAge(12);
 console.log('*******************************************************');
