@@ -107,3 +107,23 @@ function randomNum(lowerBound, upperBound){
 randomNum(10,19);
 console.log('*******************************************************');
 
+
+console.log('else if using minimum age task')
+
+
+function serveAge(age){
+
+   if(age>=18){
+    console.log('Enjoy ur wine')
+    }
+    else{
+    console.log('OI GET OUT OF MY BAR')
+    }
+
+}
+
+serveAge(18)
+serveAge(12)
+
+
+console.log('*******************************************************');
