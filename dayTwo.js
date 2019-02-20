@@ -237,9 +237,13 @@ popItemOffArray(favoriteWebsites)
 
 console.log('**********************************')
 console.log('challenge 1')
+let arrayChall1=[1,2,3,4]
 challenge1=(array,string)=>{
-return array.push(string)
+    array.push(string)
+    console.log(array)
+return array
 }
+challenge1(arrayChall1,'ADDED')
 
 console.log('**********************************')
 console.log('challenge 2')
