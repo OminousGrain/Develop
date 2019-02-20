@@ -1,288 +1,323 @@
 
-console.log('*******************************************')
-console.log('day three')
-console.log('*******************************************')
-console.log('Create a function that adds 2 numbers and multiples the result by 2.')
-const addandmultiply=(a,b)=>{
-    console.log(` add ${a} and ${b} and multiply by 2`);
-    let sum=a+b;
-    let answer=sum*2;
-    console.log(`answer is ${answer}`);
-}
-addandmultiply(1,2);
-addandmultiply(4,2);
-console.log('*******************************************')
-console.log('convert from declaration to arrow function')
-console.log('*******************************************')
-console.log('declarative function ')
-function factorial (n) {
-    if ((n === 0) || (n === 1)) {
-      return 1;
-    } else {
-      return (n * factorial(n-1));
-    } 
-   }
-console.log(factorial(33));
-console.log('arrow function') 
- factorial1=(n)=>{
-    if ((n === 0) || (n === 1)) {
-      return 1;
-    } else {
-      return (n * factorial1(n-1));
-    }
-   }
-   console.log(factorial1(33));
-   console.log('*******************************************')
-console.log('find all instances of search term in a  in string ')
-const findAllInstances=(string,search)=>{
-    console.log('*******************************************')
-    console.log(` >>>string is ${string}`)
-    console.log(` >>>search term  is ${search}`)
-    console.log(` >>>length of search term is ${search.length}`)
-    let substringLength=search.length
-    console.log(`Check Substrings in sequences of ${substringLength} to see if they match our search term`)
-    let storage=[]
-    for(let i=0;i<string.length;i++){
-        if(string.substring(i,i+substringLength)===search){    
-            storage.push(i)
-        }   
-    }
-    console.log(` >>>the search term is located at the following indexes ${storage}`)
-}
-findAllInstances('ha','a');
-findAllInstances('hahahafffffffffhaaaa','a');
-console.log('*******************************************')
-returnFirstCharacter=(string)=>{
-    console.log(`the string is ${string} and the first character of the string is...`)
-    return string[0]
-}
-console.log('>>>>'+returnFirstCharacter('hello'))
-console.log('>>>>'+returnFirstCharacter('Goodbye'))
-console.log('*******************************************************************************************************************************')
-console.log('*******************************************************************************************************************************')
-console.log('')
-console.log('Create a cashmachine that dispenses cash if pin number is correct and your balance is equal to more than the amout we withdraw')
-console.log('')
-console.log('*******************************************************************************************************************************')
-console.log('*******************************************************************************************************************************')
+//display the 9th characxter in uppercase on the console
+let test1='All Around the World';
 
+let eightUpper = test1.charAt(7).toUpperCase();
+console.log('*******************************************************');
+console.log('display the 9th characxter in uppercase on the console');
+console.log(`>>>>> ${eightUpper} <<<<<<`);
+console.log('*******************************************************');
+console.log('WITHDRAW 10 POUNDS FROM 82929201');
+let account={
+    amount:200,
+    withdrawTen:function(name){
 
-const cashMachine = (pinNumber,dispense,balance)=>{
-    let authPin=2002
-    if(pinNumber===authPin && balance>=dispense){
-        console.log('Correct Pin')
-        console.log(`dispensing ${dispense} pounds remaining balance is ${balance-dispense}`) 
+        if(name==='Niell'){
+            this.amount-10;
+            console.log('Ten Pounds Withdrawn')
+        }
+       else{
+           console.log('Permission Denied')
+       }
     }
-    else if (pinNumber===authPin && balance<dispense){
-        console.log('Correct Pin')
-        console.log(`Inadequate Funds`) 
+}
+account.withdrawTen('Niell');
+console.log('*******************************************************');
+console.log('Try to steal another accounts money');
+let account2={
+    amount:200,
+    withdrawTen:function(name){
+        if(name==='Ben'){
+            this.amount-10;
+            console.log('Ten Pounds Withdrawn')
+        }
+       else{
+           console.log('Permission Denied')
+       }
+    }
+}
+account.withdrawTen('Niell');
+console.log('*******************************************************');
+const favFood = 'Chinese';
+console.log('favorite food is ');
+console.log(favFood.concat(' and curry'))
+console.log('*******************************************************');
+console.log('  Numerical Operators ');
+let myAge=23;
+console.log('   age in 4 years ');
+console.log(myAge+4);
+console.log(' age in  1 year ');
+myAge++;
+console.log(myAge);
+console.log('age in two years');
+console.log(++myAge);
+console.log('   age in  5 year ');
+myAge+=5;
+console.log(myAge);
+myAge-=5;
+console.log('age half my age');
+myAge*=0.5;
+console.log(myAge);
+myAge*=2;
+myAge/=2;
+console.log(myAge);
+console.log('*******************************************************');
+let myFavDrink='coffee'
+console.log('my favorite drink')
+console.log(myFavDrink)
+console.log(`my favorite drink is ${myFavDrink.toUpperCase()}`)
+console.log('*******************************************************');
+console.log('store someones name age and favorite color and logs it in complete sentence')
+const myName1 = 'Ben'
+const myColor1='red'
+let myAge1=23
+console.log(`my name is ${myName1} my age is ${myAge1} and my fav color is ${myColor1}`)
+console.log('*******************************************************');
+console.log('lets make an object class constructor then use it to produce a person and then use a contained function ')
+class Person {
+
+    constructor(name, color, age) {
+        name = this.name;
+        age = this.age;
+        color = this.color;
+    }
+  
+    speak() {
+      console.log(`my name is ${myName1} my age is ${myAge1} and my fav color is ${myColor1}`);
+    }
+}
+const ben = new Person('ben','age','red');
+ben.speak();
+console.log('*******************************************************');
+
+console.log('Make two variables, one called lowerBound and one called upperBound.');
+
+function randomNum(lowerBound, upperBound){
+    let random = Math.floor((Math.random()*(upperBound-lowerBound))+lowerBound);
+    console.log(`our random number is ${random}`);
+}
+randomNum(10,19);
+console.log('*******************************************************');
+console.log('else if using minimum age task')
+function serveAge(age){
+   if(age>=18){
+    console.log('Enjoy ur wine');
     }
     else{
-        console.log('Incorrect Pin')
+    console.log('OI GET OUT OF MY BAR');
     }
 }
-cashMachine(2002,10,10)
-cashMachine(2002,10,5)
-cashMachine(2001,10,10)
- console.log('**********************************')
- //create account with balance
- //create object which contains functions to operate upon the account
- //inside this object we need dispensecash(),checkPin(),check(funds), 
-class Account {
-  constructor(name,pin, balance){
-    this.name = name;
-    this.pin = pin;
-    this.balance=balance
-  }
-  displayBalance() {
-   console.log(`balance of ${this.name}s account is ${this.balance}`)
-  }
-  testBalanceDispense(cash,balance){
-      if(cash<=balance){
-          console.log('sufficient Funds')
-          return true
-      }
-      else{
-        console.log('insufficient Funds')
-          return false
-      }
-  }
-  authDispense(auth){
-   if(auth===this.pin){
-       console.log('Authenticated Transfer')
-       return true;
-   }
-   else{
-       console.log('authentification Failed')
-       return false;
-   }
-  }
-  changeBalance(cash,operator){
-      if(operator==='add'){
-          console.log(`adding ${cash}`)
-          this.balance+=cash
+serveAge(18);
+serveAge(12);
+console.log('*******************************************************');
+console.log('now add a country conditional')
+function serveAge(age, country){
+    if(age>=18 && country==='UK'){
+     console.log('Enjoy ur wine');
+     }
+     if(age>=21 && country==='USA'){
+        console.log('Enjoy ur wine');
+        }
+     else{
+     console.log(`get out you dumb ${country}-person`);
+     }
+ }
+ serveAge(18,'UK');
+serveAge(21,'USA');
+serveAge(17,'UK');
+serveAge(20,'USA');
+console.log('*******************************************************');
+/*Create a variable called password.
+Check how many letters are in the password, if there are less than 8 log to the console that the password is too short. Otherwise log the password to the console.*/
+console.log('challenge 1')
+console.log('*******************************************************');
+let password = 'password'
 
-          console.log(this.balance)
-      }
-      else if(operator==='subtract'){
-          console.log(`subtracting ${cash}`)
-          this.balance-=cash
-          console.log(this.balance)
-      }
-  }
-  dispense(amount,auth){
-      console.log(`auth is ${auth}`)
-      console.log(`amount is ${amount}`)
-      this.displayBalance()
-      if(bensAccount.authDispense(auth)===true){
-          if(bensAccount.testBalanceDispense(amount,this.balance)){
-              console.log('Dispensing')
-              bensAccount.changeBalance(amount,'subtract')
-              console.log(`Balance remaining is ${this.balance}`)
-          }
-          else{
-              console.log('insufficient funds')
-          }
-      }   
-  }
+function checkPassword(password){
+    if(password.length<8){
+        console.log('password too short')
+    }
+    else{
+        console.log(`${password} is ok`)
+    }
 }
-let bensAccount = new Account("Ben",2002,200);
-bensAccount.displayBalance()
-console.log('**********************************')
-console.log('testing authentification')
-console.log('**********************************')
-bensAccount.authDispense(2002)
-bensAccount.authDispense(2001)
-console.log('**********************************')
-console.log('testing changing balance')
-bensAccount.changeBalance(10,'add')
-bensAccount.changeBalance(10,'subtract')
-console.log('**********************************')
-console.log('testing balance')
-bensAccount.testBalanceDispense(10,200)
-bensAccount.testBalanceDispense(10,5)
-bensAccount.testBalanceDispense(10,10)
-console.log('**********************************')
-console.log('**********************************')
-console.log('testing dispensing correct')
-console.log('**********************************')
-bensAccount.dispense(2002,10)
-console.log('**********************************')
-console.log('testing dispensing failed auth')
-console.log('**********************************')
-bensAccount.dispense(10,2001)
-console.log('**********************************')
-console.log('testing dispensing insufficient funds')
-console.log('**********************************')
-bensAccount.dispense(300,2002)
-console.log('**********************************')
-console.log('make own array')
-const sam = {
-    drinks:['coffee','wine','gin'],
-music:['terrible music','terrible music 1','terrible music 3' ],
+checkPassword(password);
+checkPassword('less');
+checkPassword('123456789');
+console.log('*******************************************************');
+console.log('challenge 2')
+/*Challenge 2:
+Create a variable called num.
+Check if the variable is divisible by 3 or 5. If it is log  to the console. Otherwise log “This number is not divisible by 3 or 5”.*/
+console.log('*******************************************************');
+function checkDiv(num){
+    if(num%3===0 || num%5===0){
+        console.log('Divisible by 3 or 5');
+    }
+    else{
+        console.log('Not divisible by 3 or 5');
+    }
 }
-console.log('**********************************')
-console.log('select Drink Of Sam')
-selectDrink=(obj)=>{
-    console.log(obj.drinks[Math.floor(Math.random()*2)])
+checkDiv(3)
+checkDiv(4)
+checkDiv(5)
+console.log('*******************************************************');
+console.log('challenge 3');
+/*sam.basak [2:18 PM]
+Challenge 3:
+Create a variable called num.
+If num is divisible by 3 log “fizz” to the console, if it’s divisible by 5 log “buzz” to the console, if it’s divisible by both 3 and 5 log “fizz buzz” to the console. Otherwise log num to the console.*/
+function fizzBuzz(num){
+    if(num%5===0){
+        console.log('fizz')
+    }
+    else if(num%5) {
+        console.log('buzz')
+    }
+    else if(num%5===0 && num%3===0){
+        console.log('fizz buzz')
+    }
+
+    else{
+        console.log(num)
+    }
+        
+   
 }
-selectDrink(sam)
-console.log('**********************************')
-console.log('select Music Of Sam')
-selectMusic=(obj)=>{
-    console.log(obj.music[Math.floor(Math.random()*2)])
-}
-selectMusic(sam)
-console.log('**********************************')
-console.log('replacing')
-let numbers = ['one','two','three','four','five','six','seven']
-changeNumber=(index,replacement,array)=>{
-array[index]=replacement
-console.log(array)
-}
-changeNumber(3,'>>>REPLACED<<<',numbers)
-console.log('**********************************')
-console.log('PUSHING')
-let order = ['HOT CHOCOLATE','BANNANA','LINT'];
-addItemToArray=(array, item)=>{
-    array.push(item)
-    console.log(array)
-}
-addItemToArray(order,'>>>>PUSHED<<<<<')
-console.log('**********************************')
-console.log('POPPING')
-popItemOffArray=(array)=>{
-    console.log(`popped off ${array.pop()}`)
+
+fizzBuzz(3)
+fizzBuzz(5)
+fizzBuzz(15)
+fizzBuzz(7)
+
+/*hallenge 4:
+Create a variable called num.
+Check if the number is a palindrome (looks the same forward as it does backwards e.g. 1001 or 20202).*/
+
+function palindrome(number){
+    let length= number.length;
+    
+    let firstHalf=number.slice(0,length/2);
+  
+    let secondHalf=number.slice(length/2)
+    
+    secondHalf=secondHalf.split('').reverse().join('')
+    
+    if (secondHalf===firstHalf){
+        console.log('is a palindrome')
+    }
+    else{
+        console.log('not a palindrome')
+    }
     
 }
-popItemOffArray(order)
-popItemOffArray(order)
-console.log('**********************************')
-console.log('Create a list of your favourite websites (3 of them )and then add another 2 once you’ve created the list')
-console.log('**********************************')
-let favoriteWebsites=['Facebook','Twitter','Google']
-console.log(`original 3 favorite sites are ${favoriteWebsites}`)
-console.log('**********************************')
-console.log('adding Netflix')
-console.log('**********************************')
-addItemToArray(favoriteWebsites,'NETFLIX')
-console.log('**********************************')
-console.log('adding GMAIL')
-console.log('**********************************')
-addItemToArray(favoriteWebsites,'Gmail')
-console.log('**********************************')
-console.log('Removing Last Item ')
-console.log('**********************************')
-popItemOffArray(favoriteWebsites)
-
-console.log('**********************************')
-console.log('challenge 1')
-let arrayChall1=[1,2,3,4]
-challenge1=(array,string)=>{
-    array.push(string)
-    console.log(array)
-return array
-}
-challenge1(arrayChall1,'ADDED')
-
-console.log('**********************************')
-console.log('challenge 2')
-let topping1=['tomato','lettuce','beans','sausage','jalepino']
-challenge2=(toppings)=>{
-if(toppings.length===5){
-    console.log(`I would Like ${toppings}`)
-}
-else{console.log('incorrect number of toppings')}
-}
-challenge2(topping1)
-
-console.log('**********************************')
-console.log('challenge 3')
-let array3=[1,2,3]
-array3.unshift(0)
-console.log(array3)
-console.log('**********************************')
-console.log('challenge 4')
-random6=()=>{
-    let array6=[]
-    for(let i=0;i<6;i++){
-        array6.push(Math.floor((Math.random()*50+1))
-        )
+palindrome('100001')
+palindrome('12345')
+/* PROJECT EULER*/
+console.log('*******************************************************');
+function sumOfSquares(start, end){
+    orgNum=[];
+    orgSquare=[];
+    for(let i =0;i<=end;i++){
+        orgNum.push(i)
+        orgSquare.push(i**2)
     }
-    console.log(array6)
+    console.log(orgNum)
+    console.log(orgSquare)
+    let sumSquare = 
+    orgSquare.reduce((total,num)=>{
+   return total += num;
+    } , 0 );
+console.log('sum of each squared')
+    console.log(sumSquare)
+    let sumOfAll= orgNum.reduce((total,num)=>{
+        return total+=num
+    })**2
+    console.log('sum of all squared')
+    console.log(sumOfAll)
+console.log('difference ')
+console.log(sumOfAll-sumSquare)
 }
-random6()
-
-console.log('**********************************')
+sumOfSquares(0,10)
+console.log('*******************************************************');
 console.log('challenge 5')
-count9To0=()=>{
-    let countDown=[]
-    for(let i=9;i>-1;i--){
-        countDown.push(i)
+let placeOfWork='CODE CODENATION'
+let townOfHome='ROSSENDALE'
+function whereAreYou(){
+    var today = new Date();
+  var h = today.getHours();
+console.log(`time is ${h}`)
+    if(h<8 || h<5){
+        console.log(`at home in ${townOfHome}`)
     }
-    console.log(countDown)
+    if(h===8){
+        console.log('commuting')
+    }
+    if(h>8 ){
+        console.log(`at work in ${placeOfWork}`)   
+     }
 }
-count9To0()
-console.log('**********************************')
+whereAreYou()
+console.log('*******************************************************');
+console.log('problem 2')
+function fibonnaciSumEven(){
+    let fibonacci=[1,2]
+    for(let i=2; (fibonacci[i-1]+fibonacci[i-2])<4000000;i++){
+        fibonacci.push(fibonacci[i-1]+fibonacci[i-2])
+    }
+console.log(fibonacci)
+let evenFibs = fibonacci.filter(num=>num%2===0)
+console.log(evenFibs)
+let sumEvenFib = evenFibs.reduce((total,num)=>{return total+=num},0)
+console.log(sumEvenFib)
+}
+fibonnaciSumEven(3)
+//let string1 = “jrfndklhgfndjkjlkgperfijfhdknsadcvjhiiohjfkledsopiuhgtyujwsdxcvhgfdjhiopiwquhejkdsoiufghedjwshi”.
+//find first and last occurence of hi 
+console.log('*******************************************************');
+function findHi(str){  
+console.log(str.lastIndexOf("hi"))
+console.log(str.indexOf('hi'))    
+}
+findHi('hihi')
+function findLastVowel(str){
+    console.log(str)
+     str=str.split('')
+    let lasta = str.lastIndexOf('a');
+    let laste = str.lastIndexOf('e');
+    let lasti = str.lastIndexOf('i');
+    let lasto = str.lastIndexOf('o');
+    let lastu = str.lastIndexOf('u');
+    let lastVowels=[]
+    lastVowels.push(lasta)
+    lastVowels.push(laste)
+    lastVowels.push(lasti)
+    lastVowels.push(lasto)
+    lastVowels.push(lastu)
+    lastVowels.sort((a,b)=>{return b-a})
+    console.log(lastVowels[0])
+    }
+    findLastVowel('httttedfd')
+    console.log('*******************************************************');
 
+    function matcherVowel(string){
+        
+       
+        console.log(string.split('').reverse().join('').search(/[aeiou]/))
 
+    }
+
+    matcherVowel('1e34e');
+   
+  console.log('******************')
+
+  nameAger=(name,age)=>{
+      console.log(`my name is ${name} and my age is ${age}`)
+  }
+  nameAger('Ben',23);
+
+  multiplier=(a,b)=>{
+      console.log(a*b)
+  }
+  multiplier(1,3)
+  multiplier(2,3)
