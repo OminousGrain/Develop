@@ -110,6 +110,19 @@ class Account {
        return false;
    }
   }
+  changeBalance(cash,operator){
+      if(operator==='add'){
+          console.log(`adding ${cash}`)
+          this.balance+=cash
+
+          console.log(this.balance)
+      }
+      else if(operator==='subtract'){
+          console.log(`subtracting ${cash}`)
+          this.balance-=cash
+          console.log(this.balance)
+      }
+  }
   dispense(amount,auth){
       console.log(`auth is ${auth}`)
       console.log(`amount is ${amount}`)
@@ -117,7 +130,7 @@ class Account {
       if(bensAccount.authDispense(auth)===true){
           if(bensAccount.testBalanceDispense(amount,this.balance)){
               console.log('Dispensing')
-              this.balance-=amount;
+              bensAccount.changeBalance(amount,'subtract')
               console.log(`Balance remaining is ${this.balance}`)
           }
           else{
@@ -151,4 +164,8 @@ console.log('**********************************')
 console.log('testing dispensing insufficient funds')
 console.log('**********************************')
 bensAccount.dispense(300,2002)
+console.log('**********************************')
+console.log('testing changing balance')
+bensAccount.changeBalance(10,'add')
+bensAccount.changeBalance(10,'subtract')
 console.log('**********************************')
