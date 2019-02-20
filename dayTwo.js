@@ -58,8 +58,15 @@ returnFirstCharacter=(string)=>{
 }
 console.log('>>>>'+returnFirstCharacter('hello'))
 console.log('>>>>'+returnFirstCharacter('Goodbye'))
-console.log('*******************************************')
-console.log('Create a cashmachine that dispenses cashif pin number is correct and your balance is equal to more than the amout we withdraw')
+console.log('*******************************************************************************************************************************')
+console.log('*******************************************************************************************************************************')
+console.log('')
+console.log('Create a cashmachine that dispenses cash if pin number is correct and your balance is equal to more than the amout we withdraw')
+console.log('')
+console.log('*******************************************************************************************************************************')
+console.log('*******************************************************************************************************************************')
+
+
 const cashMachine = (pinNumber,dispense,balance)=>{
     let authPin=2002
     if(pinNumber===authPin && balance>=dispense){
@@ -147,6 +154,10 @@ console.log('**********************************')
 bensAccount.authDispense(2002)
 bensAccount.authDispense(2001)
 console.log('**********************************')
+console.log('testing changing balance')
+bensAccount.changeBalance(10,'add')
+bensAccount.changeBalance(10,'subtract')
+console.log('**********************************')
 console.log('testing balance')
 bensAccount.testBalanceDispense(10,200)
 bensAccount.testBalanceDispense(10,5)
@@ -165,7 +176,109 @@ console.log('testing dispensing insufficient funds')
 console.log('**********************************')
 bensAccount.dispense(300,2002)
 console.log('**********************************')
-console.log('testing changing balance')
-bensAccount.changeBalance(10,'add')
-bensAccount.changeBalance(10,'subtract')
+console.log('make own array')
+const sam = {
+    drinks:['coffee','wine','gin'],
+music:['terrible music','terrible music 1','terrible music 3' ],
+}
 console.log('**********************************')
+console.log('select Drink Of Sam')
+selectDrink=(obj)=>{
+    console.log(obj.drinks[Math.floor(Math.random()*2)])
+}
+selectDrink(sam)
+console.log('**********************************')
+console.log('select Music Of Sam')
+selectMusic=(obj)=>{
+    console.log(obj.music[Math.floor(Math.random()*2)])
+}
+selectMusic(sam)
+console.log('**********************************')
+console.log('replacing')
+let numbers = ['one','two','three','four','five','six','seven']
+changeNumber=(index,replacement,array)=>{
+array[index]=replacement
+console.log(array)
+}
+changeNumber(3,'>>>REPLACED<<<',numbers)
+console.log('**********************************')
+console.log('PUSHING')
+let order = ['HOT CHOCOLATE','BANNANA','LINT'];
+addItemToArray=(array, item)=>{
+    array.push(item)
+    console.log(array)
+}
+addItemToArray(order,'>>>>PUSHED<<<<<')
+console.log('**********************************')
+console.log('POPPING')
+popItemOffArray=(array)=>{
+    console.log(`popped off ${array.pop()}`)
+    
+}
+popItemOffArray(order)
+popItemOffArray(order)
+console.log('**********************************')
+console.log('Create a list of your favourite websites (3 of them )and then add another 2 once you’ve created the list')
+console.log('**********************************')
+let favoriteWebsites=['Facebook','Twitter','Google']
+console.log(`original 3 favorite sites are ${favoriteWebsites}`)
+console.log('**********************************')
+console.log('adding Netflix')
+console.log('**********************************')
+addItemToArray(favoriteWebsites,'NETFLIX')
+console.log('**********************************')
+console.log('adding GMAIL')
+console.log('**********************************')
+addItemToArray(favoriteWebsites,'Gmail')
+console.log('**********************************')
+console.log('Removing Last Item ')
+console.log('**********************************')
+popItemOffArray(favoriteWebsites)
+
+console.log('**********************************')
+console.log('challenge 1')
+challenge1=(array,string)=>{
+return array.push(string)
+}
+
+console.log('**********************************')
+console.log('challenge 2')
+let topping1=['tomato','lettuce','beans','sausage','jalepino']
+challenge2=(toppings)=>{
+if(toppings.length===5){
+    console.log(`I would Like ${toppings}`)
+}
+else{console.log('incorrect number of toppings')}
+}
+challenge2(topping1)
+
+console.log('**********************************')
+console.log('challenge 3')
+let array3=[1,2,3]
+array3.unshift(0)
+console.log(array3)
+console.log('**********************************')
+console.log('challenge 4')
+random6=()=>{
+    let array6=[]
+    for(let i=0;i<6;i++){
+        array6.push(Math.floor((Math.random()*50+1))
+        )
+    }
+    console.log(array6)
+}
+random6()
+
+console.log('**********************************')
+console.log('challenge 5')
+count9To0=()=>{
+    let countDown=[]
+    for(let i=9;i>-1;i--){
+        countDown.push(i)
+    }
+    console.log(countDown)
+}
+count9To0()
+console.log('**********************************')
+
+
