@@ -408,3 +408,144 @@ removeSecond(['Keep', 'Remove','Keep'])
 removeSecond(['Keep', 'Remove','Keep','Remove'])
 removeSecond(['Keep', 'Remove','Keep','Remove','Keep', 'Remove','Keep','Remove'])
 removeSecond(['Keep', 'Remove','Keep','Remove','Keep', 'Remove','Keep','Remove','Keep', 'Remove','Keep','Remove','Keep', 'Remove','Keep','Remove'])
+console.log('****************************************************************************************************')
+console.log('INITIALISE')
+//'Jack Ryan'                   => 'Jack Ryan'
+//'Lois Mary Lane'              => 'Lois M. Lane'
+//'Dimitri'                     => 'Dimitri'
+//'Alice Betty Catherine Davis' => 'Alice B. C. Davis'
+initialise=(name)=>{
+    name=name.split(' ')
+    console.log(name)
+    let count = 0
+    let endIndex = name.length-1
+    let answer=[]
+ 
+    name.forEach((name)=>{
+        if(count===endIndex || count===0){
+           
+            answer.push(name)
+        }
+        
+        else{
+          
+           answer.push(name[0])
+        }
+        
+        count++
+    })
+    console.log(answer.join(' '))
+}
+initialise('Jack Ryan' )
+initialise('Lois Mary Lane'  )
+initialise('Dimitri'  )
+initialise('Alice Betty Catherine Davis')
+console.log('****************************************************************************************************')
+
+find_needle=(arr)=>{
+    let index = 0
+    while(arr[index]!=='needle'){
+
+        index++
+
+    }
+    console.log(`needle is at index ${index}`)
+}
+find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+
+find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'randomJunk','hay', 'junk', 'hay','needle'])
+console.log('****************************************************************************************************')
+ /*  string.forEach((character,index)=>{
+      if(character === character.toUpperCase()){
+            console.log('uppercase');
+            string[index].toLowerCase();
+        } 
+        else if (character === character.toLowerCase()){
+            console.log('lowerCase');
+             string[index].toUpperCase();
+        }
+
+    })
+     */
+
+
+toAlternatingCase=(string)=>{
+    string = string.split('');
+    console.log(string);
+  for(let i=0; i<string.length;i++){
+      
+    if(string[i] === string[i].toUpperCase()){
+        console.log('uppercase');
+        string[i]=string[i].toLowerCase();
+    } 
+
+    else if (string[i] === string[i].toLowerCase()){
+        console.log('lowerCase');
+         string[i]=string[i].toUpperCase();
+    }
+      
+  }
+    console.log(string);  
+}
+toAlternatingCase('HELLO');
+toAlternatingCase('hello');
+console.log('****************************************************************************************************')
+toAlternatingForEach=(string)=>{
+    console.log(string);
+    string = string.split('');
+    console.log('becomes');
+  
+    string.forEach((character,index)=>{
+
+        if(character === character.toUpperCase()){
+            string[index]= string[index].toLowerCase();
+        } 
+
+        else if (character === character.toLowerCase()){ 
+            string[index]= string[index].toUpperCase();
+        }
+    })
+    
+    
+    console.log(string.join(''))
+    console.log('')
+}
+toAlternatingForEach('HELLO');
+toAlternatingForEach('hello');
+toAlternatingForEach('hElLo');
+console.log('****************************************************************************************************')
+
+//n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+powerTwo=(n)=>{
+    let powers =[]
+    for(let i = 0 ;i<=n;i++){
+        
+        powers.push(2**i)
+    }
+    console.log(powers)
+}
+powerTwo(10);
+powerTwo(4);
+console.log('****************************************************************************************************')
+console.log('Chinese Zodiak');
+//elements change every 2 years
+//signs change every year 12 cycle
+let animals = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig']
+let elements =['Wood', 'Fire', 'Earth', 'Metal', 'Water']
+
+//1984 wood Rat
+zodiakSign=(yearBorn)=>{
+    let currentYear = yearBorn-1984
+    if(currentYear<0){
+        currentYear*=-1;
+    }
+    let currentElement=elements[currentYear%5]
+    let currentAnimal=animals[currentYear%12]
+
+    console.log(`Born in ${yearBorn} means you are a ${currentElement} ${currentAnimal}`)
+}
+zodiakSign(1984)
+zodiakSign(2008)
+zodiakSign(1995)
+console.log('****************************************************************************************************')
