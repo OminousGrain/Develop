@@ -1,0 +1,27 @@
+
+body {
+    font-family: "Arial";
+}
+.main-image {
+
+    border:solid 4px black;
+    border-radius:50%;
+}
+.section-title{
+    text-transform:uppercase;
+}
+h1{
+    background-color:plum;
+    padding:5px;
+    color:blue;
+}
+li{
+    padding:5px;
+}
+.dog{
+    height: 20%;
+    width: 20%;
+    background-color: whitesmoke;
+    border-radius: 50%;
+   
+}
