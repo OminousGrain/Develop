@@ -1,0 +1,153 @@
+h1{
+text-align:center;
+color:blue;
+}
+img{
+    border:solid blue 10px;
+    border-radius:50%;
+    float:center;
+    display:block;
+    margin-left: auto;
+  margin-right: auto;
+ 
+
+    
+   
+}
+img:hover{
+    border:solid blue 10px;
+    border-radius:50%;
+    float:center;
+    animation-name: spinImage;
+  animation-duration: 4s;
+    
+}
+@-webkit-keyframes spinImage {
+    0%  {-webkit-transform: rotateX(0deg); -webkit-transform-origin: 0% 50% 0;}  
+    100% {-webkit-transform: rotateX(360deg); -webkit-transform-origin: 0% 50% 0;}  
+}
+h2{
+    color:blue;
+    
+    padding:2px;
+
+   
+    
+}
+p{
+    padding:4px;
+   
+   
+}
+nav{
+    background-color:black;
+  text-align: center;
+  display:inline;
+}
+
+#joining-code-nation>p{
+    color:blue;
+    background-color:cyan;
+    border:solid black 6px;
+   
+}
+
+#interests>p{
+    color:blue;
+    background-color:cyan;
+    border:solid black 6px;
+}
+
+#current-path>p{
+    color:blue;
+    background-color:cyan;
+    border:solid:black 6px;
+}
+#experience>p{
+    color:blue;
+    background-color:cyan;
+    border:solid black 6px;
+
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    color:blue;
+    border:solid black 6px;
+    font-size:12px;
+    
+   
+  }
+header>h1:hover{
+color:red;
+animation-name: title1;
+  animation-duration: 4s;
+}
+
+
+
+    @keyframes title1 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+      }
+
+nav{
+    font-size:20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display:inline;  
+    padding:20px;
+    margin:20px;
+    padding-bottom:50px;
+
+}
+nav>a{
+    padding:20px;
+    list-style-type: none;
+    
+    width: 200px;
+    background-color:black;
+}
+nav>a:hover{ 
+    color:blue; 
+    background-color:cyan;
+}
+aside>a{
+    color:red;
+    padding-left:50px;
+    font-size:50px;
+    text-align:center;
+}
+aside>a:hover{
+    background-color:cyan;
+}
+body{
+    background-image:url('giphy.gif');
+}
+#background1{
+    background-image:url('giphy.gif');
+}
+#gohome>h1{
+   font-color:red;
+   display:block;
+   
+}
+#gohome>h1:hover{
+    background-color:red;
+}
+
+#skull{
+
+    marquee-speed: fast;
+}
+
+#gameOver{
+    background-image:url('tenor.gif');
+}
