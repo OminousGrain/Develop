@@ -183,4 +183,34 @@ echo '   '
 
 ?>
 
+
+<?php
+$name='Ben';
+echo $name;
+?>
+
 ....
+
+
+<?php
+$name = 'Ben';
+$string_one = "Hello \n\$name\n\n!\n";
+echo $string_one;
+echo  '$name';
+echo  "\$name";
+?>
+
+<?php
+$name1 = 'SOMETHING';
+echo "*******************************\n";
+echo 'concatenation';
+echo "\n";
+echo "\n";
+echo "\n";
+
+echo "something".$name1;
+echo "\n";
+$name1.='BIGGER';
+echo $name1;
+echo "\n";
+?>

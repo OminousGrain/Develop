@@ -173,3 +173,15 @@ if 3 > 5:
     print('3<5')
 else:
     print('3 is not greater than 5')
+
+
+
+    print('***************************************************')
+
+
+    def sayName(name):
+        print(name)
+
+
+
+sayName('ben is function')
